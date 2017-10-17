@@ -1,0 +1,8 @@
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\bin\Debug\netcoreapp2.0\SAESP.Domain.Core.deps.json
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\bin\Debug\netcoreapp2.0\SAESP.Domain.Core.dll
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\bin\Debug\netcoreapp2.0\SAESP.Domain.Core.pdb
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\obj\Debug\netcoreapp2.0\SAESP.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\obj\Debug\netcoreapp2.0\SAESP.Domain.Core.AssemblyInfoInputs.cache
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\obj\Debug\netcoreapp2.0\SAESP.Domain.Core.AssemblyInfo.cs
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\obj\Debug\netcoreapp2.0\SAESP.Domain.Core.dll
+C:\Users\rmc.paulo.rodrigues\Desktop\SAESP - Camadas separadas por responsabilidade\SAESP\App\SAESP.Domain.Core\obj\Debug\netcoreapp2.0\SAESP.Domain.Core.pdb
