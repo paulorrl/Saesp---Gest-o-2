@@ -6,6 +6,8 @@ namespace SAESP.Domain.Core.Validation
 {
     public static class AssertionConcern
     {
+        //TODO: Inserir mais métodos genéricos de validações!
+
         public static bool IsSatisfiedBy(params DomainNotification[] notifications)
         {
             IEnumerable<DomainNotification> __notifications = from notify in notifications

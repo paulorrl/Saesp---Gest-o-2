@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP - Camadas separadas por responsabilidade\\SAESP\\App\\SAESP.Domain.Core\\SAESP.Domain.Core.csproj",
+      "projectUniqueName": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Domain.Core\\SAESP.Domain.Core.csproj",
       "projectName": "SAESP.Domain.Core",
-      "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP - Camadas separadas por responsabilidade\\SAESP\\App\\SAESP.Domain.Core\\SAESP.Domain.Core.csproj",
+      "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Domain.Core\\SAESP.Domain.Core.csproj",
       "packagesPath": "C:\\Users\\rmc.paulo.rodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP - Camadas separadas por responsabilidade\\SAESP\\App\\SAESP.Domain.Core\\obj\\",
+      "outputPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Domain.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
