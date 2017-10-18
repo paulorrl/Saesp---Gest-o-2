@@ -9,7 +9,7 @@ namespace SAESP.Users.Domain.Validators
         {
             return AssertionConcern.IsSatisfiedBy
                 (
-                    AssertionConcern.IsEmail(email.Mail, "email", "Digite o e-mail em um formato válido")
+                    AssertionConcern.IsEmail(email.Mail, "Email", "Digite o e-mail em um formato válido")
                 );
         }
     }

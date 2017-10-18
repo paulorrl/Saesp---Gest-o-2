@@ -9,8 +9,8 @@ namespace SAESP.Users.Domain.Validators
         {
             return AssertionConcern.IsSatisfiedBy
                 (
-                    AssertionConcern.AssertArgumentLength(name.FirstName, 3, 80, "First_Name", "Nome deve conter entre 3 à 80 caracteres"),
-                    AssertionConcern.AssertArgumentLength(name.LastName, 3, 80, "Last_Name", "Sobrenome deve conter entre 3 à 80 caracteres")
+                    AssertionConcern.AssertArgumentLength(name.FirstName, 3, 80, "FirstName", "Nome deve conter entre 3 à 80 caracteres"),
+                    AssertionConcern.AssertArgumentLength(name.LastName, 3, 80, "LastName", "Sobrenome deve conter entre 3 à 80 caracteres")
                 );
         }
     }
