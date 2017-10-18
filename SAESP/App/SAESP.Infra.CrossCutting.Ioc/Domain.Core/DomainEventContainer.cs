@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SAESP.Domain.Core.Container;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SAESP.Infra.CrossCutting.Ioc
+namespace SAESP.Infra.CrossCutting.Ioc.Domain.Core
 {
     public class DomainEventContainer : IContainer
     {

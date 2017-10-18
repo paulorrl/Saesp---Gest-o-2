@@ -1870,20 +1870,6 @@
           "bin/placeholder/SAESP.Domain.Core.dll": {}
         }
       },
-      "SAESP.Infra.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
-          "SAESP.Users.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SAESP.Infra.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SAESP.Infra.Data.dll": {}
-        }
-      },
       "SAESP.Users.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -6078,11 +6064,6 @@
       "path": "../SAESP.Domain.Core/SAESP.Domain.Core.csproj",
       "msbuildProject": "../SAESP.Domain.Core/SAESP.Domain.Core.csproj"
     },
-    "SAESP.Infra.Data/1.0.0": {
-      "type": "project",
-      "path": "../SAESP.Infra.Data/SAESP.Infra.Data.csproj",
-      "msbuildProject": "../SAESP.Infra.Data/SAESP.Infra.Data.csproj"
-    },
     "SAESP.Users.Domain/1.0.0": {
       "type": "project",
       "path": "../SAESP.Users.Domain/SAESP.Users.Domain.csproj",
@@ -6091,9 +6072,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Microsoft.EntityFrameworkCore.SqlServer >= 1.1.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "SAESP.Domain.Core >= 1.0.0",
-      "SAESP.Infra.Data >= 1.0.0",
       "SAESP.Users.Domain >= 1.0.0"
     ]
   },
@@ -6107,11 +6087,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Users.Application\\SAESP.Users.Application.csproj",
-      "projectName": "SAESP.Users.Application",
-      "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Users.Application\\SAESP.Users.Application.csproj",
+      "projectUniqueName": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Infra.Data\\SAESP.Infra.Data.csproj",
+      "projectName": "SAESP.Infra.Data",
+      "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Infra.Data\\SAESP.Infra.Data.csproj",
       "packagesPath": "C:\\Users\\rmc.paulo.rodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Users.Application\\obj\\",
+      "outputPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Infra.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6130,14 +6110,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Infra.Data\\SAESP.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Infra.Data\\SAESP.Infra.Data.csproj"
-            },
             "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Users.Domain\\SAESP.Users.Domain.csproj": {
               "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Users.Domain\\SAESP.Users.Domain.csproj"
-            },
-            "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Domain.Core\\SAESP.Domain.Core.csproj": {
-              "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\App\\SAESP.Domain.Core\\SAESP.Domain.Core.csproj"
             }
           }
         }
@@ -6156,6 +6130,10 @@
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "1.1.0"
           }
         },
         "imports": [

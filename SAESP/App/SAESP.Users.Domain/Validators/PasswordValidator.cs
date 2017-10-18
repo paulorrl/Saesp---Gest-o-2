@@ -5,11 +5,12 @@ namespace SAESP.Users.Domain.Validators
 {
     public static class PasswordValidator
     {
-        public static void Validate(this Password password)
+        public static bool Validate(this Password password)
         {
-            AssertionConcern.IsSatisfiedBy
+            return AssertionConcern.IsSatisfiedBy
                 (
-                    // Inserir validações de senha
+                    AssertionConcern.AssertMinLength("Password", 8, "Password", "A senha deve conter no mínimo 8 caracteres"),
+                    AssertionConcern.AssertArgumentEquals(password.Pass, password.ConfirmPass, "Password", "As senhas não coincidem")
                 );
         }
     }

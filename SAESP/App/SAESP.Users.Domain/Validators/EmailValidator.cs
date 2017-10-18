@@ -5,11 +5,11 @@ namespace SAESP.Users.Domain.Validators
 {
     public static class EmailValidator
     {
-        public static void Validate(this Email email)
+        public static bool Validate(this Email email)
         {
-            AssertionConcern.IsSatisfiedBy
+            return AssertionConcern.IsSatisfiedBy
                 (
-                    // Inserir validação de email (Método do Assertion)
+                    AssertionConcern.IsEmail(email.Mail, "email", "Digite o e-mail em um formato válido")
                 );
         }
     }

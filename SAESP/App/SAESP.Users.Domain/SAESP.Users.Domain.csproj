@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Results\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SAESP.Domain.Core\SAESP.Domain.Core.csproj" />
   </ItemGroup>
 
