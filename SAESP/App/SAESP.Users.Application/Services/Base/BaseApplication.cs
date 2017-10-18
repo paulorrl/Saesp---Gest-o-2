@@ -2,21 +2,22 @@
 using SAESP.Domain.Core.Notification;
 using SAESP.Domain.Core.Services;
 using SAESP.Infra.Data.Transactions;
+using System;
 
 namespace SAESP.Users.Application.Services.Base
 {
-    public abstract class BaseApplication : ServiceNotification
+    public class BaseApplication : ServiceNotification
     {
         private readonly IUow _uow;
 
-        protected BaseApplication(IUow uow)
+        public BaseApplication(IUow uow)
         {
             _uow = uow;
         }
 
-        internal bool Commit()
+        public bool Commit()
         {
-            if (HasNotifications())
+            if (HasNotification())
             {
                 return false;
             }
@@ -25,13 +26,13 @@ namespace SAESP.Users.Application.Services.Base
             return true;
         }
 
-        internal void Rollback(string message)
+        public void Rollback(string message)
         {
             DomainEvent.Raise<DomainNotification>(new DomainNotification("BusinessError", message));
             Rollback();
         }
 
-        internal void Rollback()
+        public void Rollback()
         {
             _uow.Rollback();
         }

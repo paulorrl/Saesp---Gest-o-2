@@ -1,5 +1,6 @@
 ﻿using SAESP.Domain.Core.Commands;
 using SAESP.Users.Domain.Commands.Inputs;
+using System;
 
 namespace SAESP.Users.Application.Interfaces
 {

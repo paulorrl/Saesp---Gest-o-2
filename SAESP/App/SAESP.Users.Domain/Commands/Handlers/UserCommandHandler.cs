@@ -13,9 +13,10 @@ namespace SAESP.Users.Domain.Commands.Handlers
         private readonly IUserRepository _userRepository;
         private readonly IUserFactory _userFactory;
 
-        public UserCommandHandler(IUserRepository userRepository)
+        public UserCommandHandler(IUserRepository userRepository, IUserFactory userFactory)
         {
             _userRepository = userRepository;
+            _userFactory = userFactory;
         }
 
         public ICommandResult Handle(RegisterUserCommand command)
@@ -27,7 +28,7 @@ namespace SAESP.Users.Domain.Commands.Handlers
 
             var newUser = _userFactory.Create(command);
 
-            if (HasNotifications())
+            if (HasNotification())
             {
                 return null;
             }

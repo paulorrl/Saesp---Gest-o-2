@@ -1,11 +1,17 @@
 ﻿using SAESP.Domain.Core.Commands;
+using System;
 using System.Collections.Generic;
 
 namespace SAESP.Domain.Core.Notification
 {
-    public class DomainNotificationHandler : ICommandHandler<DomainNotification>
+    public class DomainNotificationHandler : ICommandHandler<DomainNotification>, IDisposable
     {
-        private readonly List<DomainNotification> _notifications = new List<DomainNotification>();
+        private List<DomainNotification> _notifications;
+
+        public DomainNotificationHandler()
+        {
+            _notifications = new List<DomainNotification>();
+        }
 
         public ICommandResult Handle(DomainNotification command)
         {
@@ -26,6 +32,11 @@ namespace SAESP.Domain.Core.Notification
         private List<DomainNotification> GetValue()
         {
             return _notifications;
+        }
+
+        public void Dispose()
+        {
+            _notifications = new List<DomainNotification>();
         }
     }
 }

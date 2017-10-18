@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SAESP.Domain.Core;
+using SAESP.Infra.CrossCutting.Ioc.Application;
 using SAESP.Infra.CrossCutting.Ioc.Data;
 using SAESP.Infra.CrossCutting.Ioc.Domain.Core;
 using SAESP.Infra.CrossCutting.Ioc.Modules.Users;
@@ -12,6 +13,9 @@ namespace SAESP.Infra.CrossCutting.Ioc
         {
             // Domain Core (SharedKernel)
             DomainEventServices.Resolver(container);
+
+            // Application Users
+            UserApplicationServices.Resolver(container);
 
             // Infra.Data
             DataServices.Resolver(container);
