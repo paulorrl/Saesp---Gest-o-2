@@ -9,8 +9,8 @@ namespace SAESP.Users.Domain.Validators
         {
             return AssertionConcern.IsSatisfiedBy
                 (
-                    AssertionConcern.AssertMinLength("Password", 8, "Password", "A senha deve conter no mínimo 8 caracteres"),
-                    AssertionConcern.AssertArgumentEquals(password.Pass, password.ConfirmPass, "Password", "As senhas não coincidem")
+                    AssertionConcern.AssertMinLength(password.Pass, 8, "Password", "A senha deve conter no mínimo 8 caracteres"),
+                    AssertionConcern.AssertArgumentEquals(password.Pass, password.ConfirmPass, "ConfirmPassword", "As senhas não coincidem")
                 );
         }
     }

@@ -25,14 +25,12 @@ namespace SAESP.API.Controllers.Base
                     data = result
                 });
             }
-            else
+
+            return BadRequest(new
             {
-                return BadRequest(new
-                {
-                    success = false,
-                    errors = _notification.GetNotifications()
-                });
-            }
+                success = false,
+                errors = _notification.GetNotifications()
+            });            
         }
     }
 }

@@ -88,7 +88,9 @@ namespace SAESP.Domain.Core.Validation
                                                               select notify;
 
             NotifyAll(__notifications);
-            return __notifications.Count<DomainNotification>().Equals(0);
+
+            var testeBool = __notifications.Count<DomainNotification>().Equals(0);
+            return testeBool;
         }
 
         private static void NotifyAll(IEnumerable<DomainNotification> notifications)
