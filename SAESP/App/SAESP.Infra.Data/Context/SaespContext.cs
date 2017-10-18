@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SAESP.Domain.Core;
+using SAESP.Infra.Data.Mapping;
 using SAESP.Users.Domain.Entities;
 
 namespace SAESP.Infra.Data.Context
@@ -9,7 +11,12 @@ namespace SAESP.Infra.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SaespDesign;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(Configuration.ConnectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            new UserMap(modelBuilder);
         }
     }
 }

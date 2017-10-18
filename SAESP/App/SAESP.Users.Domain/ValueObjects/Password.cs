@@ -9,6 +9,8 @@ namespace SAESP.Users.Domain.ValueObjects
 
         public string ConfirmPass { get; private set; }
 
+        protected Password() { }
+
         public Password(string password, string confirmPassword)
         {
             Pass = password;

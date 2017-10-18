@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using SAESP.Users.Application.Interfaces;
 using SAESP.Users.Domain.Commands.Inputs;
 using SAESP.Domain.Core.Services;
+using System;
 
 namespace SAESP.API.Controllers
 {
@@ -19,6 +20,20 @@ namespace SAESP.API.Controllers
             _userApp = userApp;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                var result = _userApp.GetUsers();
+                return await Response(result);
+            }
+            catch (Exception e)
+            {
+                return ResponseError(new[] { "Erro interno ... " });
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post( [FromBody] RegisterUserCommand command)
         {
@@ -27,13 +42,9 @@ namespace SAESP.API.Controllers
                 var result = _userApp.AddUser(command);
                 return await Response(result);
             }
-            catch
+            catch (Exception e)
             {
-                return BadRequest(new
-                {
-                    success = false,
-                    errors = new[] { "Erro interno no servidor. Tente novamente mais tarde!" }
-                });
+                return ResponseError(new[] { "Erro interno ... " });
             }
         }
     }

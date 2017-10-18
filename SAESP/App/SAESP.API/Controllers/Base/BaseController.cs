@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SAESP.Domain.Core.Services;
-using System;
 
 namespace SAESP.API.Controllers.Base
 {
@@ -26,11 +25,14 @@ namespace SAESP.API.Controllers.Base
                 });
             }
 
-            return BadRequest(new
+            return ResponseError(_notification.GetNotifications());
+        }
+
+        public IActionResult ResponseError(object data) =>
+            BadRequest(new
             {
                 success = false,
-                errors = _notification.GetNotifications()
-            });            
-        }
+                errors = data
+            });
     }
 }
