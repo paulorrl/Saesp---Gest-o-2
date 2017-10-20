@@ -17,7 +17,5 @@ namespace SAESP.Users.Domain.Entities
             Email = email;
             Password = password;
         }
-
-
     }
 }

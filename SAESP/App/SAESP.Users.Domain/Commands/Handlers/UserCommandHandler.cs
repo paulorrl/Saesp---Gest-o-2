@@ -35,7 +35,7 @@ namespace SAESP.Users.Domain.Commands.Handlers
 
             var user = _userRepository.GetByEmail(newUser.Email);
 
-            if (user.Email.Mail.Equals(newUser.Email.Mail))
+            if (user != null && user.Email.Mail.Equals(newUser.Email.Mail))
             {
                 AddNotification(new DomainNotification("email_duplicated", "Este e-mail já está cadastrado")); // Possibilidade do uso de Factory
                 return null;

@@ -7,17 +7,32 @@ namespace SAESP.Infra.Data.Mapping
     {
         public UserMap(ModelBuilder builder)
         {
-            var map = builder.Entity<User>();
+            var map = builder.Entity<User>().ToTable("User");
 
-            map.HasKey(x => x.Id);
+            map.OwnsOne(x => x.Name)
+                .Property(x => x.FirstName)
+                .IsRequired()
+                .HasColumnName("nome")
+                .HasMaxLength(100);
 
-            map.HasOne(x => x.Name).WithOne().IsRequired();
-            // map.Property(x => x.Name.LastName);
+            map.OwnsOne(x => x.Name)
+                .Property(x => x.LastName)
+                .IsRequired()
+                .HasColumnName("sobrenome")
+                .HasMaxLength(100);
 
-            map.Property(x => x.Email.Mail);
+            map.OwnsOne(x => x.Email)
+                .Property(x => x.Mail)
+                .IsRequired()
+                .HasColumnName("email");
 
-            map.Property(x => x.Password.Pass);
-            map.Ignore(x => x.Password.ConfirmPass);
+            map.OwnsOne(x => x.Password)
+                .Property(x => x.Pass)
+                .HasColumnName("senha")
+                .HasMaxLength(40);
+
+            map.OwnsOne(x => x.Password)
+                .Ignore(x => x.ConfirmPass);
         }
     }
 }

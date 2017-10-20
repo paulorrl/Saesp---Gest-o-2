@@ -25,14 +25,14 @@ namespace SAESP.Users.Application.Services
 
         public ICommandResult AddUser(RegisterUserCommand command)
         {
-            _handler.Handle(command);
+            var result = _handler.Handle(command);
 
             if ( Commit() )
             {
-                Console.WriteLine("1 ou n ações após o evento de domínio (Registrar usuário) ocorrer com sucesso, por exemplo: Enviar email de boas vindas.");
+                Console.WriteLine("1 ou n ações, após o evento de domínio (Registrar usuário) ocorrer com sucesso, por exemplo: Enviar email de boas vindas.");
             }
 
-            return null;
+            return result;
         }
 
         public IEnumerable<GetUsersListCommandResult> GetUsers()

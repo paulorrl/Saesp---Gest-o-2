@@ -5,9 +5,6 @@ using SAESP.Users.Domain.ValueObjects;
 using System.Linq;
 using SAESP.Users.Domain.Commands.Results;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using Dapper;
-using SAESP.Domain.Core;
 
 namespace SAESP.Infra.Data.Repositories
 {
@@ -33,12 +30,24 @@ namespace SAESP.Infra.Data.Repositories
 
         public IEnumerable<GetUsersListCommandResult> GetUsers()//int take, int skip)
         {
-            var query = "SELECT [Id], [Email], [FirstName], [LastName] FROM [User]";
-            using (var conn = new SqlConnection(Configuration.ConnectionString))
+            var users = _context.Users.ToList();
+            var usersResult = new List<GetUsersListCommandResult>();
+
+            foreach (var u in users)
             {
-                conn.Open();
-                return conn.Query<GetUsersListCommandResult>(query);
+                usersResult.Add(new GetUsersListCommandResult
+                    { Id = u.Id, FirstName = u.Name.FirstName, LastName = u.Name.LastName, Email = u.Email.Mail }
+                );
             }
+
+            return usersResult;
+
+            //var query = "SELECT [Id], [FirstName], [LastName], [Email] FROM [User]";
+            //using (var conn = new SqlConnection(Configuration.ConnectionString))
+            //{
+            //    conn.Open();
+            //    return conn.Query<GetUsersListCommandResult>(query);
+            //}
         }
     }
 }

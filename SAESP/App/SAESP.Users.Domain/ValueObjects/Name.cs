@@ -7,7 +7,7 @@ namespace SAESP.Users.Domain.ValueObjects
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
-        protected Name() { }
+        private Name() { }
 
         public Name(string firstName, string lastName)
         {

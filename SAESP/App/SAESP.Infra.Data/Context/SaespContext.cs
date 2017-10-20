@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SAESP.Domain.Core;
 using SAESP.Infra.Data.Mapping;
 using SAESP.Users.Domain.Entities;
 
@@ -7,12 +6,11 @@ namespace SAESP.Infra.Data.Context
 {
     public class SaespContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public SaespContext(DbContextOptions<SaespContext> options) : base (options)
         {
-            optionsBuilder.UseSqlServer(Configuration.ConnectionString);
         }
+
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

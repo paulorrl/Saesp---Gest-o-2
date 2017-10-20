@@ -6,6 +6,8 @@ namespace SAESP.Users.Domain.ValueObjects
     {
         public string Mail { get; private set; }
 
+        private Email() { }
+
         public Email(string mail)
         {
             Mail = mail;

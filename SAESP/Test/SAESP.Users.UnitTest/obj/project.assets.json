@@ -5621,7 +5621,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rmc.paulo.rodrigues\\.nuget\\packages\\": {},
+    "C:\\Users\\Paulo Rodrigues\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5630,17 +5630,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\Test\\SAESP.Users.UnitTest\\SAESP.Users.UnitTest.csproj",
+      "projectUniqueName": "D:\\Desktop\\RMC\\Design 2\\SAESP\\Test\\SAESP.Users.UnitTest\\SAESP.Users.UnitTest.csproj",
       "projectName": "SAESP.Users.UnitTest",
-      "projectPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\Test\\SAESP.Users.UnitTest\\SAESP.Users.UnitTest.csproj",
-      "packagesPath": "C:\\Users\\rmc.paulo.rodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmc.paulo.rodrigues\\Desktop\\SAESP_Camadas\\SAESP\\Test\\SAESP.Users.UnitTest\\obj\\",
+      "projectPath": "D:\\Desktop\\RMC\\Design 2\\SAESP\\Test\\SAESP.Users.UnitTest\\SAESP.Users.UnitTest.csproj",
+      "packagesPath": "C:\\Users\\Paulo Rodrigues\\.nuget\\packages\\",
+      "outputPath": "D:\\Desktop\\RMC\\Design 2\\SAESP\\Test\\SAESP.Users.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rmc.paulo.rodrigues\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Paulo Rodrigues\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

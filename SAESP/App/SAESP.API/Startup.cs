@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SAESP.Infra.CrossCutting.Ioc;
+using SAESP.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace SAESP.API
 {
@@ -24,6 +26,7 @@ namespace SAESP.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SaespContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             RegisterServices.Resolver(services);
 
             services.AddMvc();
